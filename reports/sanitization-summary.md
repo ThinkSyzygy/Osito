@@ -4,7 +4,7 @@ Check date: 2026-08-07
 
 Scope: the complete `osito-open` private-staging candidate
 
-Status: Windows-local practical remediation evidence is current. Human private-staging review remains incomplete, and this report does not claim public-release readiness.
+Status: Historical Windows-local practical remediation evidence as of 2026-08-07. The publication disposition is superseded by the final addendum below.
 
 This report records evidence gathered from the candidate repository itself. No private source vault or sibling project was accessed or compared, no package was installed, and no repository content was sent to a cloud scanner. Automated results support review; they do not prove confidentiality, correctness, licensing, or publication safety.
 
@@ -149,8 +149,16 @@ Before any visibility change or publication, a human owner must:
 
 GitHub private vulnerability reporting is recommended when available, but it is optional and its absence alone is not a blocker. Suspected exposure details must not be posted publicly.
 
-## Current disposition
+## Historical disposition (superseded)
 
 **READY FOR FINAL INDEPENDENT PRACTICAL AUDIT**
 
-This means the bounded local remediation and deterministic checks passed. It does not authorize publication, change repository visibility, or replace human confidentiality and licensing review.
+This was the disposition on 2026-08-07: the bounded local remediation and deterministic checks passed, but an independent practical audit and human publication decision were still pending.
+
+## Final publication closeout addendum — 2026-08-14
+
+This report originally captured the 2026-08-07 Windows remediation state. A later independent private-staging practical audit was subsequently completed. That audit found no confirmed confidential, client, proprietary, or credential leak. Git history was clean, and zero unreachable Git objects remained at the conclusion of that audit.
+
+Linux runtime validation was subsequently completed successfully. macOS runtime validation remains untested and is a documented limitation rather than an automatic publication blocker.
+
+The only later content change before this closeout was the narrow README public-launch wording update in commit `13a611f`. The final publication decision and supporting closeout evidence are recorded separately in the [publication review](publication-review-2026-08-14.md).

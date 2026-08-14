@@ -13,7 +13,7 @@ Complete this checklist manually before changing repository visibility, sharing 
 
 ## Human content review
 
-- [ ] Every tracked file has received a human review.
+- [ ] Public-facing and high-risk content has received human review; the complete tree has received automated or independent review, with any exceptions recorded.
 - [ ] Filenames, metadata, comments, examples, fixtures, and commit messages were reviewed.
 - [ ] All examples are clearly labeled fictional.
 - [ ] Fictional names, organizations, dates, identifiers, values, requirements, and results do not resemble a private source.
@@ -67,7 +67,7 @@ Complete this checklist manually before changing repository visibility, sharing 
 - [ ] Any public maintainer or security contact shown is intentional and usable; no placeholder contact is present.
 - [ ] Organization profile, contributor metadata, and commit author information are suitable for public display.
 - [ ] Pages, releases, packages, actions, applications, secrets, and collaborators are configured intentionally.
-- [ ] Announcement copy has received separate privacy and claims review.
+- [ ] If announcement copy exists, it has received separate privacy and claims review.
 - [ ] A final repository-visibility check will be performed immediately after any authorized change.
 
 ## Approval
