@@ -59,6 +59,7 @@ TEXT_FILENAMES = {
     "NOTICE",
     "README.md",
     "SECURITY.md",
+    "START_HERE.md",
 }
 ARCHIVE_EXTENSIONS = {
     ".7z",
@@ -85,6 +86,7 @@ EXPECTED_TOP_LEVEL = {
     "PUBLICATION_CHECKLIST.md",
     "README.md",
     "SECURITY.md",
+    "START_HERE.md",
     "archive",
     "config",
     "docs",

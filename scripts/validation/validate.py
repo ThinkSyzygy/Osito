@@ -36,6 +36,7 @@ REQUIRED_FILES = {
     "PUBLICATION_CHECKLIST.md",
     "README.md",
     "SECURITY.md",
+    "START_HERE.md",
     "config/metadata-schema.md",
     "config/osito.example.yaml",
     "docs/security-and-privacy.md",
@@ -49,6 +50,7 @@ REQUIRED_FILES = {
     "scripts/setup/create_project.py",
     "scripts/setup/create_project.sh",
     "scripts/validation/validate.py",
+    "prompts/system/osito-onboarding.md",
 }
 REQUIRED_DIRECTORIES = {
     "config",
@@ -80,6 +82,7 @@ EXPECTED_TOP_LEVEL = {
     "PUBLICATION_CHECKLIST.md",
     "README.md",
     "SECURITY.md",
+    "START_HERE.md",
     "archive",
     "config",
     "docs",

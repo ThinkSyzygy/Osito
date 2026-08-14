@@ -2,7 +2,20 @@
 
 > An open-source operating framework for AI-assisted engineering teams.
 
-Osito is a text-first starter system for engineers who need project records, technical evidence, reviews, and AI-agent work to remain understandable and auditable over time. It addresses a common failure mode in growing engineering efforts: decisions, assumptions, test evidence, meeting actions, and AI-generated material become scattered across tools and lose their authority, context, or owner.
+Osito is a local, text-first engineering workspace that helps an individual or small team keep project context organized, reviewable, and useful to an AI assistant over time. It keeps decisions, assumptions, evidence, actions, and AI-generated proposals from becoming disconnected or silently authoritative.
+
+## Fastest way to try Osito
+
+1. Use the GitHub template, clone, or download Osito.
+2. Open the folder with an AI agent that can safely read and edit a local working directory.
+3. Tell it: `Read START_HERE.md and onboard me to Osito.`
+4. Answer the short setup questions.
+5. Review the proposed changes, then let the agent create a fictional sandbox after you approve them.
+6. Try: `Help me capture a requirement and plan how to validate it.`
+
+Start with [START_HERE.md](START_HERE.md). A normal web chatbot does not automatically have access to your local folder; use a filesystem-aware coding, desktop, or editor agent for the guided flow.
+
+**Prefer manual setup?** Follow [Getting started](docs/getting-started.md). Git and Python remain part of the supported local system, and the manual documentation explains each command.
 
 ## What Osito is
 
@@ -72,14 +85,14 @@ tests/       Structural, sanitization, and example checks
 reports/     Public-safe generated review summaries
 ```
 
-Your configured workspace may add `projects/`, `archive/`, and a generated-output directory. Those working directories do not need to live in this framework repository.
+An operational private deployment may add `projects/`, `archive/`, and a generated-output directory beneath its selected repository root. The bundled project-creation tool accepts only safe repository-relative paths.
 
-## Quick start
+## Manual quick start
 
 1. Read [Installation](docs/installation.md) and [Security and privacy](docs/security-and-privacy.md).
 2. Copy `config/osito.example.yaml` to a local configuration file.
 3. Choose a workspace that has appropriate access controls.
-4. Copy the project templates into a new, fictional sandbox project.
+4. Preview, then create a new fictional sandbox with the project-creation tool.
 5. Run the local checks described in [Getting started](docs/getting-started.md).
 6. Review the fictional example before adapting workflows to real work.
 
@@ -87,6 +100,7 @@ POSIX shell:
 
 ```sh
 cp config/osito.example.yaml config/osito.local.yaml
+python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional --dry-run
 python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional
 python scripts/validation/validate.py --root .
 python -m unittest discover -s tests -p 'test_*.py'
@@ -97,6 +111,7 @@ PowerShell:
 
 ```powershell
 Copy-Item config/osito.example.yaml config/osito.local.yaml
+python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional --dry-run
 python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional
 python scripts/validation/validate.py --root .
 python -m unittest discover -s tests -p 'test_*.py'
@@ -109,7 +124,7 @@ python -m unittest discover -s tests -p 'test_*.py'
 
 The repository includes a fictional project that demonstrates how a team can record a requirement, link it to a risk and validation method, capture a meeting, review proposed actions, document a decision, and archive the completed work. Every person, organization, date, requirement, dimension, result, and decision in the examples is invented.
 
-Start with [Overview](docs/overview.md), then follow [Getting started](docs/getting-started.md).
+For a guided first use, start with [START_HERE.md](START_HERE.md). For the architecture and manual path, read [Overview](docs/overview.md) and [Getting started](docs/getting-started.md).
 
 ## Security and privacy warning
 

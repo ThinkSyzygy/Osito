@@ -1,5 +1,19 @@
 # Getting Started
 
+Osito supports two onboarding paths.
+
+## AI-assisted onboarding
+
+Recommended when you have an AI coding, desktop, or editor agent that can safely read and edit this local folder. Open [Start Here](../START_HERE.md) and tell the agent:
+
+`Read START_HERE.md and onboard me to Osito.`
+
+The agent follows the same local tools and safeguards documented below, but it asks only the questions needed for your setup, previews the plan, and waits for approval before writing.
+
+## Manual onboarding
+
+Use the steps below if you do not want AI assistance, your organization restricts AI use, you are troubleshooting, you maintain Osito, or you want to understand the commands the agent uses.
+
 Use a fictional sandbox first. Do not begin by connecting Osito to confidential projects, mailboxes, drives, or chat systems.
 
 ## 1. Verify prerequisites
@@ -117,19 +131,28 @@ Keep a real denylist outside the repository. Audit output can contain sensitive 
 
 ## 6. Create a fictional project
 
+Preview the project plan first:
+
+```sh
+python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional --dry-run
+```
+
+If the destination and file plan are correct, create it:
+
 ```sh
 python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional
 ```
 
-The command is the same in PowerShell:
+The commands are the same in PowerShell:
 
 ```powershell
+python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional --dry-run
 python scripts/setup/create_project.py --root . --project-id demo-project --name "Demo Project" --fictional
 ```
 
 Inspect every created file before adding real information. The `--fictional` flag records that this sandbox contains invented material; omit it only when intentionally creating an operational project under appropriate controls.
 
-Creation apply prepares the complete project before publishing it, preserves any existing destination, and stops on link-like or unsupported path structures. Run it in a local workspace with other writers stopped; `--dry-run` remains available.
+Creation apply prepares the complete project before publishing it, preserves any existing destination, and stops on link-like or unsupported path structures. Run it in a local workspace with other writers stopped, and inspect the dry-run before apply.
 
 Local NTFS on Windows is the only apply environment runtime-tested for this release. Linux and macOS backends are present but were not runtime-tested and should be treated as unvalidated. See [Installation](installation.md#filesystem-support-for-apply-operations) for the support boundary.
 
@@ -147,7 +170,7 @@ In the sandbox project:
 
 This exercises the distinction between evidence, proposed interpretation, and approved current state.
 
-## 8. Configure AI assistance carefully
+## 8. If you add AI assistance, configure it carefully
 
 Before giving an agent access:
 

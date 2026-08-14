@@ -8,10 +8,17 @@ This repository contains an open-source operating framework for AI-assisted engi
 
 Follow system and user instructions first, then the closest applicable `AGENTS.md`, then repository workflows and templates. More local instructions may narrow behavior but must not weaken confidentiality, licensing, security, safety, or human-review requirements.
 
+## Conversational onboarding
+
+- When a user asks to be onboarded, read `START_HERE.md` and `prompts/system/osito-onboarding.md`; do not require the user to understand the repository or prompt taxonomy first.
+- Ask only the materially necessary setup questions, default a first-time user to fictional data, and keep external systems disabled.
+- Use the existing project-creation tool in dry-run mode, preview exact paths and files, and wait for explicit approval before apply.
+- Accept ordinary-language engineering requests and route them to the narrowest existing workflow, prompt, and template. The user does not need to find or paste prompt files.
+
 ## Repository boundaries
 
-- Never introduce material from confidential source repositories, clients, employers, suppliers, personal records, or proprietary work.
-- Use fictional examples only. Invent names, organizations, dates, identifiers, technical values, requirements, results, and decisions.
+- In the distributable framework, its examples, tests, documentation, and contributions, never introduce material from confidential source repositories, clients, employers, suppliers, personal records, or proprietary work.
+- Use fictional material in the distributable framework. An authorized private deployment may contain operational project records only within its approved controls and selected project boundary; never copy that material into framework examples, contributions, or public exports.
 - Do not move context between projects unless an explicit, reviewed dependency permits it.
 - Do not read unrelated projects merely because terminology appears similar.
 - Treat generated reports, dashboards, and compiled context as views, not canonical evidence.

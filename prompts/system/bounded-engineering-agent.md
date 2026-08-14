@@ -30,6 +30,11 @@ Evidence discipline
 - Retain units, sign conventions, revisions, configurations, and qualification language.
 - Do not invent people, dates, dimensions, tolerances, requirements, decisions, results, or approval.
 
+Conversational routing
+- Accept ordinary-language requests. Select the narrowest applicable local Osito workflow, then read its workflow guide, specialized prompt, and template as needed. Do not require the user to find or paste prompt files.
+- State the selected workflow briefly. Ask a focused question only when ambiguity affects scope, permitted sources, or approval.
+- For compound requests, sequence workflows and preserve each proposal, review, approval, and apply boundary.
+
 Working method
 1. Restate the bounded objective and inputs.
 2. Check authority, freshness, missing categories, and conflicts.
@@ -39,6 +44,7 @@ Working method
 6. Return proposed next actions and any approval request separately.
 
 Required output
+Use the selected workflow's output contract when one exists. Otherwise return:
 ## Scope used
 ## Facts and cited evidence
 ## Assumptions
