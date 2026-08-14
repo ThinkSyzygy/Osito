@@ -1,0 +1,81 @@
+# Osito example configuration.
+# Every value in this file is fictional and safe to replace.
+
+schema_version: "1.0"
+
+repository:
+  repository_name: "osito-example"
+  organization_name: "Example Engineering"
+  default_timezone: "Etc/UTC"
+  default_date_format: "YYYY-MM-DD"
+
+workspace:
+  project_root: "projects"
+  archive_root: "archive"
+  generated_root: "generated"
+  inbox_root: "inbox"
+  template_root: "templates"
+
+identity:
+  record_id_pattern: "{type}-{project_id}-{sequence}"
+  record_id_separator: "-"
+  require_stable_ids: true
+
+governance:
+  require_human_approval: true
+  require_source_links: true
+  preserve_source_evidence: true
+  generated_content_is_canonical: false
+  allow_cross_project_context: false
+  allowed_shared_roots:
+    - "framework"
+    - "templates"
+
+features:
+  enable_meeting_ingestion: true
+  enable_requirements: true
+  enable_decision_records: true
+  enable_risk_registers: true
+  enable_action_registers: true
+  enable_validation_planning: true
+  enable_research: true
+  enable_business_operations: false
+
+review:
+  default_candidate_status: "pending"
+  require_approval_for_apply: true
+  stale_review_policy: "reject"
+  require_idempotent_apply: true
+
+privacy:
+  default_classification: "internal"
+  permitted_classifications:
+    - "public"
+    - "internal"
+    - "confidential"
+    - "restricted"
+  external_ai_allowed: false
+  external_connectors_allowed: false
+  require_export_review: true
+  denylist_path: null
+
+integrations:
+  email:
+    enabled: false
+    provider: null
+  file_storage:
+    enabled: false
+    provider: null
+  chat:
+    enabled: false
+    provider: null
+  calendar:
+    enabled: false
+    provider: null
+
+validation:
+  fail_on_broken_links: true
+  fail_on_invalid_metadata: true
+  fail_on_unlabeled_examples: true
+  fail_on_unexpected_binary_files: true
+  max_text_file_bytes: 1000000

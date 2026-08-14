@@ -1,0 +1,16 @@
+# Fictional example data only.
+fictional: true
+project_id: ORION
+project_name: "Desktop Environmental Sensor Enclosure"
+organization_name: "Example Engineering Studio"
+status: archived
+phase: closed
+confidentiality: fictional_public_example
+primary_owner: "Alex Rowan"
+primary_owner_email: "alex.rowan@example.com"
+engineering_reviewer: "Morgan Vale"
+test_reviewer: "Priya North"
+start_date: 2031-04-07
+close_date: 2031-06-30
+default_timezone: Etc/UTC
+require_human_approval: true

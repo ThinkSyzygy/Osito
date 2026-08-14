@@ -1,0 +1,58 @@
+# Local configuration and environment files
+config/osito.local.yaml
+config/*.private.yaml
+.env
+.env.*
+!.env.example
+
+# Secrets, denylists, and local reports
+*.private.txt
+*.private.md
+private/
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# JavaScript and other dependency caches
+node_modules/
+.cache/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local workspace output
+tmp/
+temp/
+build/
+dist/
+coverage/
+reports/private/
+
+# Archives and binary exports are not part of the text-first release
+*.zip
+*.7z
+*.tar
+*.gz
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
