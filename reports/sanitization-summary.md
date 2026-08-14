@@ -17,7 +17,7 @@ This report records evidence gathered from the candidate repository itself. No p
 - Input reads detect identity, name-binding, size, and metadata changes. Create and archive translate safe-read failures into their documented domain errors and do not report success.
 - Documentation now states the practical Osito v0.1 boundary: an individual or trusted small team, a stable local workspace, and other writers stopped during operations. A malicious process or user continuously racing the same writable tree is outside this threat model.
 - Security guidance directs suspected exposures away from public issues. GitHub private vulnerability reporting is recommended when available but optional; no placeholder contact is published, and absence of that feature alone is not a release blocker.
-- Platform guidance identifies local NTFS on Windows as runtime-tested. Linux and macOS implementations remain unvalidated on this host.
+- At the time of this Windows-local remediation, platform guidance identified local NTFS on Windows as runtime-tested; Linux and macOS had not been runtime-tested on this host. Later Linux evidence is recorded in the final addendum.
 
 ## Local environment
 
@@ -115,7 +115,7 @@ The host can create junctions and hardlinks, and those tests passed. This accoun
 
 ### Linux and macOS
 
-Linux and macOS backends are present but were not runtime-tested on this Windows host. Their destructive apply paths must be independently exercised in private staging before being described as supported. The POSIX equal-identity regression logic was reviewed but could not be executed here.
+At the time of this Windows-local remediation, Linux and macOS backends were present but had not been runtime-tested on this host. Linux runtime validation was completed successfully later, as recorded in the final addendum and final publication review. macOS remains untested, and its destructive apply paths must be independently exercised in private staging before being described as supported. The POSIX equal-identity regression logic was reviewed but could not be executed on this Windows host.
 
 ## Unavailable optional tools
 

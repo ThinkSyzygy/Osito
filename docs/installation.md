@@ -83,7 +83,7 @@ The audit reports link-like, reparse, unreadable, and observably changed entries
 
 Project creation and archive apply are intended for a local workspace used by an individual or trusted small team. Stop other writers before applying changes. Existing destinations are preserved, and link-like or unsupported path structures stop the operation. The tools handle ordinary destination collisions and detect some unexpected changes; they do not defend against a malicious process or user that can modify the same tree during an operation.
 
-Runtime validation for this release was performed on local NTFS on Windows. Linux and macOS backends are present but were not runtime-tested and should be treated as unvalidated. Windows network paths and non-NTFS filesystems are unsupported. If required filesystem behavior is unavailable, apply stops without claiming success. Use project-creation dry run or archive preview and a recoverable checkpoint before apply. Treat a manual-inspection error as a stop condition rather than retrying automatically.
+Runtime validation for this release was performed on local NTFS on Windows, and Linux runtime validation was subsequently completed successfully. macOS remains untested and should be treated as unvalidated. Windows network paths and non-NTFS filesystems are unsupported. If required filesystem behavior is unavailable, apply stops without claiming success. Use project-creation dry run or archive preview and a recoverable checkpoint before apply. Treat a manual-inspection error as a stop condition rather than retrying automatically.
 
 ## Offline operation
 

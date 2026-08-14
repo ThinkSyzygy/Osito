@@ -154,7 +154,7 @@ Inspect every created file before adding real information. The `--fictional` fla
 
 Creation apply prepares the complete project before publishing it, preserves any existing destination, and stops on link-like or unsupported path structures. Run it in a local workspace with other writers stopped, and inspect the dry-run before apply.
 
-Local NTFS on Windows is the only apply environment runtime-tested for this release. Linux and macOS backends are present but were not runtime-tested and should be treated as unvalidated. See [Installation](installation.md#filesystem-support-for-apply-operations) for the support boundary.
+Apply operations were runtime-validated on local NTFS on Windows, and Linux runtime validation was subsequently completed successfully. macOS remains untested and should be treated as unvalidated. See [Installation](installation.md#filesystem-support-for-apply-operations) for the support boundary.
 
 ## 7. Try the core workflow
 
