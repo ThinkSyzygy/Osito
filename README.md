@@ -127,7 +127,7 @@ See [Responsible AI use](docs/responsible-ai-use.md).
 
 Osito is **alpha software and documentation**. Interfaces, templates, schemas, and workflows may change. Use it first in a fictional or low-risk sandbox, maintain backups, and review changes before adopting it for operational engineering work.
 
-The repository is currently a **private-staging candidate, not an automatically approved public release**. A human owner must complete the [Publication checklist](PUBLICATION_CHECKLIST.md) before changing visibility or publishing a release. GitHub private vulnerability reporting is recommended when available, but it is optional and its absence alone does not block publication.
+Maintainers preparing a release should use the [Publication checklist](PUBLICATION_CHECKLIST.md). GitHub private vulnerability reporting is recommended when available, but it is optional.
 
 ## Customize Osito
 
