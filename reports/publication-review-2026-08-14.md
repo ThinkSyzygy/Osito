@@ -92,3 +92,27 @@ Ryan Stevenson confirmed that:
 The reviewed content is approved for an initial public release, subject to a separately authorized repository-visibility change and an immediate post-change visibility check. This record does not itself authorize or perform publication.
 
 This approval records a diligent review at a specific commit. Neither human review, AI assistance, nor automated tooling guarantees confidentiality, originality, licensing compliance, technical correctness, safety, or suitability for a particular engineering use.
+
+## Post-approval addendum — 2026-08-17
+
+The original publication review approved the content state at commit `13a611f3ee590ff50de33dfeeaf05c827938e2f4`. Two later changes were reviewed while the repository remained private.
+
+Commit `8bf780cefc7e1aee9d6639cc86e300d59fef325f` (`Improve conversational onboarding`) added `START_HERE.md`, conversational onboarding, natural-language workflow routing, dry-run and approval-first setup guidance, and novice-user documentation. Reported validation included:
+
+- repository validation passed;
+- Markdown and link-structure tests passed with one privilege-related skip;
+- project-tooling tests passed;
+- the full test suite passed with four platform- or privilege-related skips;
+- `git diff --check` passed;
+- sanitization reported only the two previously reviewed benign dated-report findings; and
+- a fresh-user simulation in an operating-system temporary synthetic copy passed.
+
+Commit `f9d8748025d086e214be2b2fabd1a6fbb78adcf4` (`Correct Linux validation documentation`) corrected stale platform-support wording. That change was documentation-only and passed its Markdown-link test and `git diff --check`.
+
+Linux runtime validation is documented as completed successfully. macOS runtime validation remains untested and is a documented non-blocking limitation. Windows-specific filesystem limitations remain documented where applicable.
+
+Neither reviewed change introduced a known confidentiality, licensing, security, or publication blocker. This addendum records the reviewed scope and reported validation of those changes; it does not repeat or broaden the original confidentiality and security audit. The final reviewed release candidate now corresponds to commit `f9d8748025d086e214be2b2fabd1a6fbb78adcf4`.
+
+Result: `approved for public visibility change`
+
+This disposition remains subject to a separate, explicit human authorization for any visibility change and an immediate post-change visibility check. Neither this addendum nor its supporting checks guarantees absolute confidentiality, originality, licensing compliance, security, or technical correctness.
